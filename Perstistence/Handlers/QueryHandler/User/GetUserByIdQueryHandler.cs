@@ -28,7 +28,7 @@ internal class GetUserByIdQueryHandler : BaseHandler, IRequestHandler<GetUserByI
         }
         catch
         {
-            throw new ThrowException($"User with id \"'{request.Id}'\" does not exists!");
+            throw new ThrowException($"Usuário com id \"'{request.Id}'\" não existe!");
         }
     }
 }

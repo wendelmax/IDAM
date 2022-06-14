@@ -58,7 +58,7 @@ internal class AddUserCommandHandler : BaseHandler, IRequestHandler<AddUserReque
         var result = connection.ExecuteScalar<bool>("select count(1) from [Users] where Username = @Username", new { request.Username });
         if (result)
         {
-            throw new ThrowException("User with this username already exists");
+            throw new ThrowException("Nome de usuário já existe");
         }
 
         return Task.FromResult(result);

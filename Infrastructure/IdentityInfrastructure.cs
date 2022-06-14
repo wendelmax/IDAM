@@ -63,14 +63,14 @@ public static class IdentityInfrastructure
                         context.HandleResponse();
                         context.Response.StatusCode = 401;
                         context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject("You are not Authorized");
+                        var result = JsonConvert.SerializeObject("Você não está autorizado!");
                         return context.Response.WriteAsync(result);
                     },
                     OnForbidden = context =>
                     {
                         context.Response.StatusCode = 403;
                         context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject("You are not authorized to access this resource");
+                        var result = JsonConvert.SerializeObject("Você não está autorizado para acessar esse recurso!");
                         return context.Response.WriteAsync(result);
                     }
                 };

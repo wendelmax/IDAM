@@ -73,11 +73,11 @@ public class AuthenticationCommand : IRequestHandler<AuthRequestModel, AuthRespo
                 return true;
             }
             else
-                throw new ThrowException("There was a problem logging in. Check your username and password!");
+                throw new ThrowException("Problema ao logar. Verifique seu usuário e senha!");
         }
         catch
         {
-            throw new ThrowException("There was a problem logging in. Check your username and password!");
+            throw new ThrowException("Problema ao logar. Verifique seu usuário e senha");
 
         }
     }

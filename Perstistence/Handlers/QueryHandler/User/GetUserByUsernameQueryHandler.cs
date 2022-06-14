@@ -28,7 +28,7 @@ internal class GetUserByUsernameQueryHandler : BaseHandler, IRequestHandler<GetU
         }
         catch
         {
-            throw new ThrowException($"User '{request.Username}' does not exists!");
+            throw new ThrowException($"Usuário '{request.Username}' não existe!");
         }
     }
 }
